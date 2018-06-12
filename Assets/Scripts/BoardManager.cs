@@ -47,7 +47,7 @@ public class BoardManager : MonoBehaviour {
 		//filling the gridPositions list with each of the grid positions on our game board.
 		//NOTE the reason we're going from 1 to columns - 1 instead of 0 to columns is so there is empty space around the border!!
 		for (int x = 1; x < columns - 1; x++) {
-			for (int y = 1; x < rows - 1; y++) {
+			for (int y = 1; y < rows - 1; y++) {
 				gridPositions.Add (new Vector3 (x, y, 0f));
 			}
 		}
@@ -59,7 +59,7 @@ public class BoardManager : MonoBehaviour {
 		//laying out the floor and the outer wall tiles
 		//we go from -1 to +1 here because we're building an edge on the outer portions (the boundries of the game)
 		for (int x = -1; x < columns + 1; x++) {
-			for (int y = -1; x < rows + 1; y++) {
+			for (int y = -1; y < rows + 1; y++) {
 				//Randomized floor tile
 				GameObject toInstantiate = floorTiles[Random.Range (0, floorTiles.Length)];
 
